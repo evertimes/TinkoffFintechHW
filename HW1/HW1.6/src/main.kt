@@ -10,11 +10,11 @@ fun main() {
 
 fun qsort(A:Array<Int>,l:Int,r:Int){
     if(l<r) {
-        var key = A[r]
+        val key = A[r]
         var i=l-1
         for(j in l until r)
             if(A[j]<=key){
-                i++;
+                i++
                 val tmp = A[i]
                 A[i]=A[j]
                 A[j]=tmp
