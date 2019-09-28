@@ -1,7 +1,7 @@
 fun main() {
     val A = arrayOf<Int>(5, 2, 1, 4, 3, 10, 7, 8, 9, 6,15,14,12)
 
-    qsort(A,0,A.size-1);
+    qsort(A,0,A.size-1)
 
     for(element in A){
         println(element)
@@ -11,7 +11,7 @@ fun main() {
 fun qsort(A:Array<Int>,l:Int,r:Int){
     if(l<r) {
         var key = A[r]
-        var i=l-1;
+        var i=l-1
         for(j in l until r)
             if(A[j]<=key){
                 i++;
