@@ -1,14 +1,14 @@
 fun main() {
     val A = arrayOf<Int>(5, 2, 1, 4, 3, 10, 7, 8, 9, 6,15,14,12)
 
-    qsort(A,0,A.size-1)
+    sort(A,0,A.size-1)
 
     for(element in A){
         println(element)
     }
 }
 
-fun qsort(A:Array<Int>,l:Int,r:Int){
+fun sort(A:Array<Int>,l:Int,r:Int){
     if(l<r) {
         val key = A[r]
         var i=l-1
@@ -23,7 +23,7 @@ fun qsort(A:Array<Int>,l:Int,r:Int){
         A[i+1]=A[r]
         A[r]=tmp
 
-        qsort(A,l,i)
-        qsort(A,i+2,r)
+        sort(A,l,i)
+        sort(A,i+2,r)
     }
 }
