@@ -1,6 +1,5 @@
 package ru.tinkoff
 
-import java.util.*
 
 fun main() {
     val menu=MainMenu()

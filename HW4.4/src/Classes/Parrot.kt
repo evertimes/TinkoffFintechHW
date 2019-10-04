@@ -1,6 +1,7 @@
 package ru.tinkoff
 
-class Parrot(override val name:String,override val age:Int):Flyable,Voicable,Walkable,Pet(){
+class Parrot(override val name: String, override val age: Int) : Pet(), Flyable, Voicable, Walkable {
+
     override fun fly() {
         println("*flying*")
     }

@@ -1,6 +1,6 @@
 package ru.tinkoff
 
-class Cat(override val name:String,override val age:Int):Walkable,Voicable,Pet(){
+class Cat(override val name:String,override val age:Int):Pet(),Walkable,Voicable{
     override fun voice(){
         println("Meow")
     }

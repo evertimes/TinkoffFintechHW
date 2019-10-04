@@ -1,7 +1,7 @@
 package ru.tinkoff
 
 class PetOwner(petType: Int, name: String) {
-    var myPet:Pet? = null
+    var myPet: Pet? = null
 
     init {
         when (petType) {
@@ -13,15 +13,17 @@ class PetOwner(petType: Int, name: String) {
         }
         println("Pet name is: ${myPet?.name} and pet age is ${myPet?.age}")
     }
-    fun feed(){
-            myPet?.eat()
+
+    fun feed() {
+        myPet?.eat()
     }
-    fun clean(){
-            if(myPet?.isFed==false){
-                println("There is nothing to clean")
-            }else {
-                myPet?.isFed = false
-                println("You cleaned after your pet")
-            }
+
+    fun clean() {
+        if (myPet?.isFed == false) {
+            println("There is nothing to clean")
+        } else {
+            myPet?.isFed = false
+            println("You cleaned after your pet")
+        }
     }
 }

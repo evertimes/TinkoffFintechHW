@@ -1,8 +1,8 @@
 package ru.tinkoff
 
-class Dog(val name:String,val age:Int):Walkable,Voicable,Swimable,Pet(){
+class Dog(val name:String,val age:Int):Pet(),Walkable,Voicable,Swimable{
     override fun swim() {
-        println("*swimming*");
+        println("*swimming*")
     }
 
     override fun voice() {

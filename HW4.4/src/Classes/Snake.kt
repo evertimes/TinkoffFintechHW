@@ -1,6 +1,6 @@
 package ru.tinkoff
 
-class Snake(override val name:String,override val age:Int):Crawable,Voicable,Pet(){
+class Snake(override val name:String,override val age:Int):Pet(),Crawable,Voicable{
     override fun crawl() {
         println("*Crawling*")
     }

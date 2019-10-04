@@ -1,6 +1,5 @@
 package ru.tinkoff
 
-import java.io.IOException
 import java.util.*
 
 class MainMenu {
