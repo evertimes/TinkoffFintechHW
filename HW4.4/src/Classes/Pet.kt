@@ -7,7 +7,7 @@ abstract class Pet {
     var isGone = false
     private fun runAway(){
         println("Your pet is gone!")
-        isGone=true;
+        isGone=true
     }
     fun eat(){
         if (isFed){
@@ -19,8 +19,5 @@ abstract class Pet {
     }
     fun sleep(){
         println("sleeping")
-    }
-    fun clean(){
-        println("clean")
     }
 }

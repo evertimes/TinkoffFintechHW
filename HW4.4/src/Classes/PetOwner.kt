@@ -1,19 +1,27 @@
 package ru.tinkoff
 
-class PetOwner {
+class PetOwner(petType: Int, name: String) {
     var myPet:Pet? = null
-    fun feed(){
-        try {
-            myPet?.eat()
-        }catch (e:NullPointerException){
-            println("You dont have a pet!")
+
+    init {
+        when (petType) {
+            1 -> myPet = Dog(name, 1)
+            2 -> myPet = Cat(name, 1)
+            3 -> myPet = Snake(name, 1)
+            4 -> myPet = Parrot(name, 1)
+            5 -> myPet = Fish(name, 1)
         }
+        println("Pet name is: ${myPet?.name} and pet age is ${myPet?.age}")
+    }
+    fun feed(){
+            myPet?.eat()
     }
     fun clean(){
-        try {
-            myPet?.isFed=false
-        }catch (e:NullPointerException){
-            println("You dont have a pet!")
-        }
+            if(myPet?.isFed==false){
+                println("There is nothing to clean")
+            }else {
+                myPet?.isFed = false
+                println("You cleaned after your pet")
+            }
     }
 }
