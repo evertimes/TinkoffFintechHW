@@ -24,7 +24,7 @@ class GameLoop {
                 continue
             }
 
-        }while(!owner.myPet?.isGone!!)
+        }while(!owner.myPet.isGone)
 
     }
 }

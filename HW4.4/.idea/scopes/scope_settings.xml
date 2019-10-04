@@ -2,6 +2,5 @@
   <state>
     <unnamed_scope value="lib:*..*" />
     <unnamed_scope value="src:*..*" />
-    <deny_rule from_scope="src:*..*" to_scope="lib:*..*" is_deny="true" />
   </state>
 </component>
