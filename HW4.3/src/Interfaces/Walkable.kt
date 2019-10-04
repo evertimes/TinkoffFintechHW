@@ -1,5 +1,5 @@
 package ru.tinkoff
 
 interface Walkable {
-    fun walk();
+    fun walk()
 }
