@@ -2,13 +2,11 @@ import java.util.Scanner
 
 class Car() {
     fun ride(km: Int) {
-        println("Let's ride!")
+        println("Поехали!")
         for(i in km downTo 0){
-            //if(i%20==0){
-                println("$i kilometers left")
-            //}
+                println("Осталось $i киллометров")
         }
-        println("We arrived!")
+        println("Приехали")
     }
 }
 val scan = Scanner(System.`in`)
