@@ -1,3 +1,3 @@
 package ru.tinkoff
 
-class Cat(val name:String,val age:Int);
+class Cat(val name:String,val age:Int)
