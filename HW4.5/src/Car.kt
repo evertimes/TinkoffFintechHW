@@ -6,7 +6,7 @@ class Car() {
         for(i in km downTo 0){
                 println("Осталось $i киллометров")
         }
-        println("Приехали")
+        println("Приехали!")
     }
 }
 val scan = Scanner(System.`in`)
