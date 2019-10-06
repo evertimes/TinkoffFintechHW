@@ -1,3 +1,3 @@
 package ru.tinkoff
 
-class Fish(val name:String,val age:Int);
+class Fish(val name:String,val age:Int)
