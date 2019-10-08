@@ -15,9 +15,13 @@ data class Person(
                 o1?.zipCode == o2?.zipCode &&
                 o1?.phoneNumber == o2?.phoneNumber
             ) {
+                println("${o1?.firstName} эквиватентно ${o2?.firstName}")
                 1
-            } else
+            } else{
+                println("${o1?.firstName} не эквиватентно ${o2?.firstName}")
                 0
+            }
+
         }
     }
 }
@@ -31,9 +35,23 @@ object PersonComparator : Comparator<Person> {
             o1?.zipCode == o2?.zipCode &&
             o1?.phoneNumber == o2?.phoneNumber
         ) {
+            println("${o1?.firstName} эквиватентно ${o2?.firstName}")
             1
-        } else
+        } else {
+            println("${o1?.firstName} не эквиватентно ${o2?.firstName}")
             0
+        }
     }
 
+}
+
+fun main() {
+    val personAndrey = Person("Orlov","Andrey",19,"390000","+77777777777")
+    val personAndrey1 = Person("Orlov","Andrey",19,"390000","+77777777777")
+    val personNotAndrey = Person("Orlov","Egor",19,"390000","+77777777777")
+    PersonComparator.compare(personAndrey,personAndrey1)
+    PersonComparator.compare(personAndrey,personNotAndrey)
+
+    Person.compare(personAndrey,personAndrey1)
+    Person.compare(personAndrey,personNotAndrey)
 }
