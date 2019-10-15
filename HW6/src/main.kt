@@ -1,26 +1,26 @@
 class Pet {
-    var nickname: String = ""
+    lateinit var nickname: String
     var age: Int = 0
-    var sex: String = ""
+    lateinit var sex: String
 }
 
 fun main() {
     val dog = Pet().apply {
         nickname = "Rex"  //apply подходит для тех случев
         age = 10          //когда необходимо инициализировать
-        sex = "Male"      //объект при создании. Однако, для
-    }                     // этого лучше использовать конструктор
-    val cat = Pet()
-    with(cat) {
+        sex = "Male"      //объект при создании.
+    }
+    val cat = with(Pet()) {
         nickname = "Barsik"//With подходит для тех случаев
         age = 5            //когда необходимо просто задать
-        sex = "Male"       //значения нескольких полей объекта
+        sex = "Male"       //значения нескольких полей созданного объекта
+        this
     }
-    val parrot = Pet()
-    parrot.let {
+    val parrot = Pet().let {
         it.nickname = "Kesha"
         it.age = 5
         it.sex = "Male"
+        it
     }
     val fish = Pet().also {
         it.nickname="Nemo"
