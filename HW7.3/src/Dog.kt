@@ -1,3 +1,3 @@
-class Dog:Pet() {
+class Dog : Pet() {
     val voice = "Bark"
 }

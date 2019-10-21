@@ -1,5 +1,5 @@
 fun main() {
-    val cat = Pet().apply {
+    val cat:Pet = Pet().apply {
         nickname = "Barsik"
         age = 2
         sex = "Male"
