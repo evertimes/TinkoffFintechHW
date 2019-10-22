@@ -1,5 +1,1 @@
-open class Pet {
-    lateinit var nickname: String
-    var age: Int = 0
-    var sex: String? = null
-}
+open class Pet(val nickname: String, var age: Int, val sex: String)
