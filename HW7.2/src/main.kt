@@ -1,10 +1,6 @@
 fun main() {
-    val firstCat:Pet = Cat().apply{
-        nickname = "Barsik"
-        age=5
-        sex="Male"
-        furColor="White"
-    }
+    val firstCat:Pet = Cat("Barsik", 2,"Male","Black")
+
     println(firstCat.isCat())
     /*
     Поскольку методы расширения являются статическими,
