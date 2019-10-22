@@ -1,14 +1,6 @@
 fun main() {
-    val cat:Pet = Pet().apply {
-        nickname = "Barsik"
-        age = 2
-        sex = "Male"
-    }
-    val dog: Pet = Pet().apply {
-        nickname = "Rex"
-        age = 1
-        sex = "Male"
-    }
+    val cat= Pet("Barsik",2,"Male")
+    val dog= Pet("Rex",1,"Male")
     println(dog.respectableNickname)
     println(cat.respectableNickname)
     println(cat.isAdult())

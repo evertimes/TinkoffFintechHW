@@ -1,14 +1,8 @@
-class Pet {
-    lateinit var nickname: String
-    var age: Int = 0
-    var sex: String? = null
-}
+class Pet(var nickname: String, var age: Int, var sex: String?)
 
-fun Pet.isAdult(): Boolean {
-    return this.age >= 2
-}
+fun Pet.isAdult() = this.age >= 2
 
 val Pet.respectableNickname: String
     get() {
-       return "Dear, ${this.nickname}"
+        return "Dear, ${this.nickname}"
     }
