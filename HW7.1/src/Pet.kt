@@ -1,4 +1,4 @@
-class Pet(var nickname: String, var age: Int, var sex: String?)
+class Pet(val nickname: String, var age: Int, val sex: String?)
 
 fun Pet.isAdult() = this.age >= 2
 
