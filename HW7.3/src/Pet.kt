@@ -1,1 +1,0 @@
-open class Pet(val nickname: String, var age: Int, val sex: String)
