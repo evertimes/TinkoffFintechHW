@@ -1,4 +1,4 @@
 fun main() {
     val myList = listOf("Хрюша", "Степаша", "Филя", "Гуля")
-    val helloList = myList.map { "Привет $it" }
+    val exists = myList.any { it.length==7 }
 }

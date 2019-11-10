@@ -1,4 +1,4 @@
 fun main() {
     val myList = listOf("Хрюша", "Степаша", "Филя", "Гуля")
-    val helloList = myList.map { "Привет $it" }
+    val str = myList.find {it == myList.maxBy { it.length }}
 }
