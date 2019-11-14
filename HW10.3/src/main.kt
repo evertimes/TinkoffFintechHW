@@ -3,8 +3,10 @@ fun main() {
     val myTargetList = ArrayList<String>()
     val mySourceSet = setOf("Крош", "Ежик", "Нюша", "Бараш")
     val myTargetSet = LinkedHashSet<String>()
-    for (i in 0..3) {
+    for (i in mySourceList.indices) {
         myTargetList.add(mySourceList[i])
+    }
+    for (i in mySourceSet.indices) {
         myTargetSet.add(mySourceSet.elementAt(i))
     }
     for (element in myTargetList) {
