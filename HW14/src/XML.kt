@@ -15,16 +15,31 @@ class OBJ : TAG("object"){
     fun addresses(init: ADDRESSES.()->Unit) = doInit(ADDRESSES(),init)
 }
 fun obj(init: OBJ.() -> Unit) = OBJ().apply(init)
-class NAME : TAG("name"){
-}
-class SURNAME : TAG("surname"){
-}
-class BIRTHDATE : TAG("birthDate"){
-}
+
+class NAME : TAG("name")
+class SURNAME : TAG("surname")
+class BIRTHDATE : TAG("birthDate")
+class ADDRESS : TAG("address")
+
 class ADDRESSES : TAG("addresses"){
     @Deprecated(level = DeprecationLevel.ERROR,message="no content allowed in this tag")
     override var content:String? = null
     fun address(init: ADDRESS.()->Unit) = doInit(ADDRESS(),init)
 }
-class ADDRESS : TAG("address"){
+
+fun printXML(tag: TAG){
+    if(tag.children.size ==0 ){
+        print("<${tag.tagName}>")
+        if(tag.content!=null) {
+            print(tag.content)
+        }
+    }else{
+        println("<${tag.tagName}>")
+    }
+    if(tag.children.size !=0 ){
+        for(i in tag.children){
+            printXML(i)
+        }
+    }
+    println("</${tag.tagName}>")
 }
