@@ -8,6 +8,7 @@ val myObject = obj{
         content="Andrey"
     }
     surname{
+
         content="Orlov"
     }
     birthDate{
